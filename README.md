@@ -1,78 +1,75 @@
-In this project, let's build a **Login App** by applying the concepts we have learned till now.
+In this project, let's build a **User Management Dashboard
+** by applying the concepts we have learned till now.
 
-### Refer to the image below:
 
-<br/>
-<div style="text-align: center;">
-<img src="https://assets.ccbp.in/frontend/content/react-js/login-app-output.gif" alt="login-app-output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
 
-### Design Files
+###API Details
+API Base URL: https://jsonplaceholder.typicode.com/
+End Points:
+GET /users: Fetch a list of users.
+POST /users: Add a new user (simulated).
+PUT /users/{id}: Update an existing user (simulated).
+DELETE /users/{id}: Delete a user (simulated).
+Note:
+The API used in this project is a mock API (JSONPlaceholder), meaning changes made to the users are not persistent. It's used only for testing and demonstration purposes.
 
-<details>
-<summary>Click to view</summary>
 
-- [Extra Small (Size < 576px), Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/login-sm-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/login-lg-output.png)
-
-</details>
 
 ### Set Up Instructions
+Prerequisites
+Ensure that you have Node.js and npm installed. If not, you can download and install them from Node.js official website.
 
-<details>
-<summary>Click to view</summary>
+Steps to Run the Project
+Clone the repository:
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+bash
+Copy code
+git clone <repository-url>
+cd user-management-dashboard
+Install dependencies: Install all required dependencies using npm:
+
+bash
+Copy code
+npm install
+Run the application: Start the development server:
+
+bash
+Copy code
+npm start
+The app should now be running at http://localhost:3000.
+
+Open your browser and visit http://localhost:3000 to view the app in action.
+
+
 
 ### Completion Instructions
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+App.js: Main entry point of the application that manages state, interacts with the backend API, and renders UserForm and UserList.
+UserForm.js: A component for adding or editing user details.
+UserList.js: A component that displays the list of users with options to edit or delete.
+styles.css: Global styles for the application.
+UserForm.css and UserList.css: Component-specific styles for the form and the user list.
 
-The app must have the following functionalities
+Project Structure
+bash
+Copy code
+/user-management-dashboard
+│
+├── /src
+│   ├── /components
+│   │   ├── /UserForm
+│   │   │   ├── UserForm.js
+│   │   │   └── UserForm.css
+│   │   ├── /UserList
+│   │   │   ├── UserList.js
+│   │   │   └── UserList.css
+│   ├── App.js              # Main entry point (root component)
+│   ├── index.js            # Renders the App component
+│   └── styles.css          # Global styles (optional)
+├── package.json
+└── README.md
 
-- Initially, **Please Login** message and **Login** button should be displayed
-- When the **Login** button is clicked,
-  - **Welcome User** message and **Logout** button should be displayed
-- When the **Logout** button is clicked,
-  - **Please Login** message and **Login** button should be displayed
 
-</details>
-
-<details>
-<summary>Components Structure</summary>
-
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/login-app-login-component-structure-breakdown.png" alt="login app login component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/login-app-logout-component-structure-breakdown.png" alt="login app logout component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
-
-- `src/components/Home/index.js`
-- `src/components/Home/index.css`
-- `src/components/Login/index.js`
-- `src/components/Login/index.css`
-- `src/components/Logout/index.js`
-- `src/components/Logout/index.css`
-- `src/components/Message/index.js`
-- `src/components/Message/index.css`
-</details>
 
 ### Important Note
 
@@ -84,20 +81,11 @@ Use these files to complete the implementation:
 - Achieve the given layout using only Conditional Rendering
 </details>
 
-### Resources
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #2b2c49 ; width: 150px; padding: 10px; color: white">Hex: #2b2c49</div>
-<div style="background-color: #ffffff ; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #b5b9ff ; width: 150px; padding: 10px; color: white">Hex: #b5b9ff</div>
-<div style="background-color: #f8fafc ; width: 150px; padding: 10px; color: black">Hex: #f8fafc</div>
-<div style="background-color: #303150 ; width: 150px; padding: 10px; color: white">Hex: #303150</div>
-
-</details>
+### Technologies Used
+React: JavaScript library for building the user interface.
+Axios: Promise-based HTTP client for making API requests.
+JSONPlaceholder: A free online REST API for testing and prototyping.
+CSS: For styling the components.
 
 <details>
 <summary>Font-families</summary>
@@ -105,6 +93,14 @@ Use these files to complete the implementation:
 - Roboto
 
 </details>
+
+### Features
+
+View Users: Fetch and display a list of users from the mock backend.
+Add User: Add a new user through a form (simulated via the API).
+Edit User: Edit an existing user's details and update the user data (simulated via the API).
+Delete User: Delete a user from the list (simulated via the API).
+Responsive Design: The app is mobile-friendly.
 
 > ### _Things to Keep in Mind_
 >
